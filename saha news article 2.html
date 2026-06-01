@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سامة أخبار البلد | الفساد الانتخابي في لغديرة</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.8;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .logo-primary {
+            color: #e74c3c;
+        }
+        
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #e74c3c;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        
+        article {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .article-header {
+            padding: 50px 40px;
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            border-bottom: 5px solid #e74c3c;
+        }
+        
+        .article-category {
+            display: inline-block;
+            background: #e74c3c;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .article-title {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.3);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+        
+        .article-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .article-body {
+            padding: 40px;
+        }
+        
+        .article-intro {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 25px;
+            line-height: 1.8;
+            border-right: 4px solid #e74c3c;
+            padding-right: 20px;
+        }
+        
+        .article-body h2 {
+            font-size: 24px;
+            color: #1a1a2e;
+            margin: 35px 0 20px 0;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+        
+        .article-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+            line-height: 1.9;
+            font-size: 16px;
+        }
+        
+        .highlight-box {
+            background: #ecf0f1;
+            border-right: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box strong {
+            color: #e74c3c;
+        }
+        
+        .article-body ul {
+            margin: 20px 0 20px 40px;
+            list-style: none;
+        }
+        
+        .article-body li {
+            margin-bottom: 15px;
+            padding-right: 20px;
+            position: relative;
+        }
+        
+        .article-body li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .quote {
+            border-right: 4px solid #e74c3c;
+            padding-right: 20px;
+            margin: 30px 0;
+            font-size: 18px;
+            color: #34495e;
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        .article-footer {
+            background: #ecf0f1;
+            padding: 30px 40px;
+            border-top: 1px solid #bdc3c7;
+            margin-top: 40px;
+        }
+        
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background: #e74c3c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-details h4 {
+            color: #1a1a2e;
+            margin-bottom: 3px;
+        }
+        
+        .author-details p {
+            color: #7f8c8d;
+            font-size: 13px;
+            margin: 0;
+        }
+        
+        footer {
+            background: #1a1a2e;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 13px;
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 30px 0;
+            border-radius: 4px;
+            color: #856404;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+            
+            .article-header {
+                padding: 30px 20px;
+            }
+            
+            .article-body {
+                padding: 20px;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-primary">سامة</span> أخبار البلد
+            </div>
+            <nav>
+                <a href="#home">الرئيسية</a>
+                <a href="#news">أخبار</a>
+                <a href="#investigations">تحقيقات</a>
+                <a href="#contact">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <article>
+            <!-- Article Header -->
+            <div class="article-header">
+                <span class="article-category">تحقيق استقصائي</span>
+                <h1 class="article-title">فساد انتخابي ممنهج في لغديرة: شبكات تلاعب بالأصوات والتسجيلات</h1>
+                <div class="article-meta">
+                    <span>📅 1 يونيو 2026</span>
+                    <span>✍️ فريق التحقيقات</span>
+                    <span>📍 إقليم الجديدة</span>
+                </div>
+            </div>
+
+            <!-- Article Body -->
+            <div class="article-body">
+                <p class="article-intro">
+                    كشف تحقيق استقصائي لموقع "سامة أخبار البلد" عن شبكة منظمة من الفساد الانتخابي في جماعة لغديرة بإقليم الجديدة، حيث يتم التلاعب بحقوق الناخبين والتشطيب من اللوائح الانتخابية بطرق غير قانونية، مما يهدد سلامة العملية الانتخابية وحقوق المواطنين الأساسية.
+                </p>
+
+                <h2>الأوضاع المثيرة للقلق</h2>
+                <p>
+                    وفقاً لشهادات مئات السكان الذين تحدثوا لفريقنا، يتم استهداف أكثر من 800 ناخب محتمل بعمليات تشطيب منظمة من اللوائح الانتخابية، غالباً ما يتم تنفيذها بتحويلهم إلى جماعات أخرى دون موافقتهم أو حتى علمهم بذلك. هذه العمليات تتم رغم أن هؤلاء الأفراد يحملون بطاقات إقامة سارية المفعول في منطقة لغديرة.
+                </p>
+
+                <div class="highlight-box">
+                    <strong>📊 الأرقام الأولية:</strong><br>
+                    • أكثر من 800 ناخب تم تشطيبهم بشكل غير قانوني<br>
+                    • نسبة 65% من المتضررين يؤكدون عدم طلبهم هذا التحويل<br>
+                    • 45 حالة موثقة بشكاوى رسمية لم تحصل على رد
+                </div>
+
+                <h2>آليات التلاعب والفساد</h2>
+                <p>
+                    من خلال مقابلات متعددة مع عاملين في الإدارة المحلية وناخبين متضررين، تبين أن آليات الفساد تعتمد على:</p>
+                <ul>
+                    <li><strong>التحويل الإداري القسري:</strong> نقل ناخبين إلى جماعات أخرى دون إجراءات قانونية صحيحة</li>
+                    <li><strong>التشطيب الانتقائي:</strong> حذف أسماء معينة من اللوائح لضمان نتائج معينة</li>
+                    <li><strong>الولايات السياسية:</strong> إعطاء الأفضلية للمقربين من السلطة على حساب حقوق المواطنين</li>
+                    <li><strong>التعديل البيانات الوهمي:</strong> تسجيل عناوين وهمية لناخبين وهميين</li>
+                    <li><strong>الرشاوى والضغوط:</strong> محاولات لجعل الناخبين يتركون حقوقهم مقابل مزايا</li>
+                </ul>
+
+                <h2>من يقف وراء هذه الشبكات؟</h2>
+                <p>
+                    يشير التحقيق إلى أن هذه الممارسات لا تتم بمعزل عن المسؤولين. الأدلة التي جمعناها تشير إلى تورط مباشر من:
+                </p>
+
+                <div class="highlight-box">
+                    <strong>الجهات المتورطة المحتملة:</strong><br>
+                    ✗ موظفون بالإدارة المحلية والجماعية<br>
+                    ✗ قيادات سياسية محلية معروفة<br>
+                    ✗ وسطاء يتقاضون عمولات للتلاعب<br>
+                    ✗ موظفو اللجان الانتخابية<br>
+                    ✗ أشخاص نافذون في الجماعة
+                </div>
+
+                <h2>الشهادات والأدلة</h2>
+                <p>
+                    قالت فاطمة ع. (49 سنة)، وهي أم لثلاثة أطفال وتسكن بلغديرة منذ 25 سنة: "فوجئت عند محاولتي التسجيل في اللوائح الانتخابية أنني مسجلة بعنوان وهمي في جماعة بعيدة. لم أطلب هذا أبداً ولا أعرف من فعل ذلك."</p>
+
+                <p class="quote">
+                    "هذا ليس مجرد خطأ إداري، بل تزوير منظم لحقوقنا الانتخابية"
+                </p>
+
+                <p>
+                    علي م. (56 سنة)، معلم متقاعد، أضاف: "حاولت الاعتراض على تشطيبي من اللوائح، لكن الموظفين قالوا لي أنني لا أستطيع فعل شيء. يبدو أن الأمر قد تقرر مسبقاً من أعلى."
+                </p>
+
+                <h2>التأثيرات والانتهاكات</h2>
+                <p>
+                    هذه الممارسات تنتهك عدداً من الحقوق الأساسية:</p>
+                <ul>
+                    <li>الحق في المشاركة السياسية والتصويت</li>
+                    <li>الحق في المساواة والعدالة الانتخابية</li>
+                    <li>الحق في حرية الاختيار بدون إكراه</li>
+                    <li>الحق في الشفافية والمساءلة الإدارية</li>
+                    <li>الحق في الكرامة والعدل</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <strong>⚖️ المخالفات القانونية:</strong><br>
+                    تنتهك هذه الممارسات المادة 5 من الدستور بشأن الحقوق السياسية، والقانون العضوي للانتخابات، وقوانين الجماعات المحلية.
+                </div>
+
+                <h2>التحركات المطلوبة</h2>
+                <p>
+                    يطالب التحقيق بضرورة اتخاذ الإجراءات التالية:</p>
+                <ul>
+                    <li><strong>فتح تحقيق فوري:</strong> من قبل النيابة العامة والسلطات المختصة</li>
+                    <li><strong>إيقاف الانتهاكات:</strong> وقف فوري لعمليات التشطيب غير القانونية</li>
+                    <li><strong>استعادة الحقوق:</strong> إعادة تسجيل الناخبين المتضررين فوراً</li>
+                    <li><strong>المساءلة:</strong> مساءلة المسؤولين المتورطين قضائياً</li>
+                    <li><strong>التعويض:</strong> تعويض الضحايا عن الانتهاكات</li>
+                    <li><strong>الإصلاح الهيكلي:</strong> تحسين الرقابة على العمليات الانتخابية</li>
+                </ul>
+
+                <h2>موقف السلطات</h2>
+                <p>
+                    حاولنا التواصل مع السلطات المحلية والجماعية للحصول على تعليق رسمي، لكننا لم نحصل على رد حتى وقت نشر هذا التقرير. طلبنا من رئيس الجماعة والسلطات المشرفة توضيح موقفهم من هذه الانتهاكات المنسوبة إليهم.
+                </p>
+
+                <div class="disclaimer">
+                    <strong>📌 إشعار أخلاقي:</strong> هذا التحقيق يستند إلى شهادات مباشرة، وثائق، والمقابلات مع أشخاص مختلفين. جميع الأسماء المستعارة حماية لخصوصية المتضررين. نحتفظ بجميع الأدلة للسلطات المختصة.
+                </disclaimer>
+
+                <h2>الخاتمة</h2>
+                <p>
+                    الفساد الانتخابي في جماعة لغديرة لا يتعلق فقط بتزوير انتخابات، بل بانتهاك أساسي لحقوق المواطنين والديمقراطية نفسها. يجب على السلطات المختصة التحرك بسرعة وحزم لحماية سلامة العملية الانتخابية واستعادة ثقة المواطنين. الصمت والتستر على هذه الممارسات هو تواطؤ مع الفساد.
+                </p>
+
+                <p style="margin-top: 30px; font-weight: bold; color: #e74c3c;">
+                    سامة أخبار البلد ملتزمة بالكشف عن الفساد وفضح الانتهاكات، مهما كانت التكاليف. الحقيقة هي حقنا والحقوق الانتخابية هي مسؤوليتنا جميعاً.
+                </p>
+            </div>
+
+            <!-- Article Footer -->
+            <div class="article-footer">
+                <div class="author-info">
+                    <div class="author-avatar">ف.ت</div>
+                    <div class="author-details">
+                        <h4>فريق التحقيقات</h4>
+                        <p>متخصصة في الكشف عن الفساد والانتهاكات الإدارية بجرأة واحترافية</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 سامة أخبار البلد | جميع الحقوق محفوظة | الاستقلالية | المسؤولية | الحقيقة</p>
+        <p style="margin-top: 10px; font-size: 12px;">موقع إخباري مستقل يعمل لخدمة الحقيقة والصالح العام</p>
+    </footer>
+</body>
+</html>
